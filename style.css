@@ -1,0 +1,206 @@
+/* GENERAL */
+h2
+{
+    font-size: 30px;
+}
+
+/* En tête */
+*
+{
+    font-size: 16px;
+    margin: 0;
+    padding: 0;
+    font-family: 'Lato', sans-serif;
+}
+#logo
+{
+    height: 100px;
+    width: 100px;
+    float: left;
+}
+.clear
+{
+    clear: both;
+}
+#selected
+{
+    color: rgb(239, 189, 87);
+}
+nav
+{
+    padding: 30px 0 0 20px;
+}
+
+ul
+{
+    list-style: none;
+
+}
+li
+{
+    display: inline-block;
+    margin-left: 40px;
+
+}
+nav a
+{
+    text-decoration: none;
+    font-size: 30px;
+    color: white;
+}
+nav a:hover
+{
+    color: rgb(239, 189, 87);
+
+}
+
+#top
+{
+    background-color: rgb(34, 60, 37);
+    position: fixed;
+    width: 100%;
+}
+
+/* Corp de page */
+#wrapper
+{
+    display: flex;
+    flex-direction: row;
+}
+#listeProduits{
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    margin-right: 340px; /* 300 + une marge */
+    justify-content: space-evenly;
+    margin-top: 50px;
+    margin-bottom: 30px;
+
+}
+
+#panier
+{
+    background-color: #d4cbcb;
+    height: 880px;;
+    width: 300px;
+    border-left: 3px solid rgb(34, 60, 37);
+    text-align: center;
+    position: fixed;
+    right: 2px;
+    top: 100px;
+    margin: 0 0 0 0;
+}
+#debutPanier{
+    margin: 20px 40px 20px 40px;
+    padding: 10px;
+    font-size: 30px;
+    border-radius: 10px;
+    background-color: rgb(34, 60, 37);
+    color: white;
+
+}
+
+
+#panier table{
+    text-align: center;
+    border-collapse: collapse;
+    width: 94%;
+    margin: 2%;
+}
+
+#panier table tr{
+    border: 3px solid rgb(34, 60, 37);
+
+}
+
+#panier table tr td{
+    border: 3px solid rgb(34, 60, 37);
+    padding: 5px;
+}
+
+
+#firstLine{
+    background-color: rgb(34, 60, 37);
+    color: white;
+
+}
+
+.boutonPayer{
+    margin-top: 20px;
+    width: 90%;
+    font-size: 15px;
+    padding: 10px 40px 10px 40px;
+    background-color: rgb(34, 60, 37);
+    color: white;
+    border-radius: 10px;
+    border: 3px solid white;
+    text-align: center;
+    transition: all 0.2s;
+    text-transform: uppercase;
+}
+
+.boutonPayer:hover{
+    border: 3px solid rgb(34, 60, 37);
+    background-color: white;
+    color: rgb(34, 60, 37);
+}
+.photoProduit
+{
+    height: 200px;
+    width: 200px;
+    margin: 10px 10px 0 10px;
+}
+
+.wrapProduit
+{
+    margin-left: 80px;
+    margin-top: 60px;
+    text-align: center;
+    padding: 3px 3px 3px 3px;
+}
+#choix{
+    margin-top: 100px;
+    display: flex;
+    justify-content:center ;
+}
+
+#choixQte{
+    width: 100px;
+}
+
+.wrapProduitCommand
+{
+    width: 500px;
+    text-align: center;
+    padding: 10px;
+    border: 3px solid rgb(34, 60, 37);
+}
+/*.wrapProduit:hover
+{
+    border: 3px solid rgb(34, 60, 37);
+}*/
+
+.purchaseButton
+{
+    margin-top: 20px;
+    padding: 10px 40px 10px 40px;
+    background-color: rgb(34, 60, 37);
+    color: white;
+    border-radius: 10px;
+    border: 3px solid white;
+    transition: all 0.2s;
+    text-transform: uppercase;
+}
+.purchaseButton:hover
+{
+    border: 3px solid rgb(34, 60, 37);
+    background-color: white;
+    color: rgb(34, 60, 37);
+}
+
+#choix{
+    width: 80%;
+    margin-top: 150px;
+    text-align: center;
+    padding: 3px 3px 3px 3px;
+}

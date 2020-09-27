@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html>
+<header>
+    <meta charset = 'uft-8'>
+    <title>Borne Mc do</title>
+    <link rel="stylesheet" href="[var.LINK_STYLE]">
+    <link href="https://fonts.googleapis.com/css2?family=Lato&display=swap" rel="stylesheet">
+</header>
+<body>
+
+<!-- En tête -->
+<div id="top">
+    <img id = "logo" src="[var.LOGO_PNG_URL]" alt="log de mc do">
+    <nav>
+        <ul>
+            <li><a href="#">Combien de [var.NAME_PRODUCT] souhaitez-vous ?</a></li>';
+        </ul>
+    </nav>
+    <div class="clear"></div>
+</div>
+
+<!-- Corp de la page -->
+
+
+
+
+<div id="wrapper">
+    <div id="choix">
+        <div class = "wrapProduitCommand" >
+            <img src='[var.URL_PRODUCT]' alt="bigmac" class ="photoProduit">
+            <br>[var.NAME_PRODUCT]<br><br>
+            <br>[var.PRICE_PRODUCT]<br><br>
+            <form action="[var.LINK_TRAITEMENT]" method = "POST">
+                <select id="choixQte" name="qte" size="1">
+                    <option name="qte">1</option>
+                    <option name="qte">2</option>
+                    <option name="qte">3</option>
+                    <option name="qte">4</option>
+                    <option name="qte">5</option>
+                    <option name="qte">6</option>
+                    <option name="qte">7</option>
+                    <option name="qte">8</option>
+                    <option name="qte">9</option>
+                </select>
+                <br><br>
+                <input type="hidden" name="lastPage" value= '[var.LAST_PAGE]' />
+                <input type="hidden" name="idProduct" value= '[var.ID_PRODUCT]' />
+                <input class="boutonPayer" type="submit" name="ajoutCommande" value="[var.VALUE_AJOUT_PANIER]">
+            </form>
+
+    </div>
+        <div id="panier">
+
+            <p id="debutPanier">[var.VALUE_VOTRE_PANIER]</p>
+            <table>
+                <tr id="firstLine">
+                    <td>[var.VALUE_LINE_ARTICLE]</td>
+                    <td>[var.VALUE_LINE_QTE]</td>
+                    <td>[var.VALUE_LINE_PRICE]</td>
+                </tr>
+                <tr>
+                    <td>[retourPanier.name; block=tr]</td>
+                    <td>[retourPanier.Qte]</td>
+                    <td>[retourPanier.price]</td>
+                </tr>
+
+                <tr>
+                    <td>[var.VALUE_TOTAL] </td>
+                    <td></td>
+                    <td> [var.TOTAL_PANIER] </td>
+
+                </tr>
+            </table>
+            <form action="./../paiement/paiement.php" method="post">
+                <input class="boutonPayer" type="submit" name="paiement" value="[var.VALUE_PAY]">
+            </form>
+        </div>
+</div>
+
+</body>
+</html>

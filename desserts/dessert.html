@@ -1,0 +1,75 @@
+<html>
+<header>
+    <meta charset = 'uft-8'>
+    <title>[var.TITLE]</title>
+    <link rel="stylesheet" href="[var.LINK_STYLE]">
+    <link href="https://fonts.googleapis.com/css2?family=Lato&display=swap" rel="stylesheet">
+</header>
+<body>
+
+<div id="top">
+    <img id = "logo" src="[var.LOGO_PNG_URL]" alt="log de mc do">
+    <nav>
+        <ul>
+            <li><a href="#">[var.NAV_MENU]</a></li>
+            <li><a href="[var.LINK_SANDWICH]" >[var.NAV_SANDWICH]</a></li>
+            <li><a href="[var.LINK_SALADE]">[var.NAV_SALADE]</a></li>
+            <li><a href="[var.LINK_DESSERT]" id = "selected">[var.NAV_DESSERT]</a></li>
+            <li><a href="[var.LINK_PETITE_FAIM]">[var.NAV_PETITEFAIM]</a></li>
+            <li><a href="[var.LINK_BOISSON]">[var.NAV_BOISSON]</a></li>
+        </ul>
+    </nav>
+    <div class="clear"></div>
+</div>
+
+
+<div id="wrapper">
+    <div id="listeProduits">
+        <div class="wrapProduit">
+            <img src="[itemsDessert.url; block=div]" alt="BigMac" class="photoProduit">
+            <p>[itemsDessert.name]</p>
+            <form action="[var.LINK_COMMAND]" method="post">
+                <input type="hidden" name="idProduct" value= '[itemsDessert.id]'/>
+                <input type="hidden" name="nameProduct" value= '[itemsDessert.name]'/>
+                <input type="hidden" name="urlProduct" value= '[itemsDessert.url]'/>
+                <input type="hidden" name="priceProduct" value= '[itemsDessert.price]'/>
+                <input type ="hidden" name="lastPage" value="[var.LINK_DESSERT]"/>
+                <input type="submit" value="[var.VALUE_SUBMIT]" class="purchaseButton">
+            </form>
+        </div>
+
+
+    </div>
+    <div id="panier">
+
+        <p id="debutPanier">[var.VALUE_VOTRE_PANIER]</p>
+        <table>
+            <tr id="firstLine">
+                <td>[var.VALUE_LINE_ARTICLE]</td>
+                <td>[var.VALUE_LINE_QTE]</td>
+                <td>[var.VALUE_LINE_PRICE]</td>
+            </tr>
+            <tr>
+                <td>[retourPanier.name; block=tr]</td>
+                <td>[retourPanier.Qte]</td>
+                <td>[retourPanier.price]</td>
+            </tr>
+
+            <tr>
+                <td>[var.VALUE_TOTAL] </td>
+                <td></td>
+                <td> [var.TOTAL_PANIER] </td>
+
+            </tr>
+        </table>
+        <form action="./../paiement/paiement.php" method="post">
+            <input class="boutonPayer" type="submit" name="paiement" value="[var.VALUE_PAY]">
+        </form>
+    </div>
+</div>
+
+
+
+
+</body>
+</html>
